@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %} 
+<h2>결과</h2>
+
+<p>입력값: {{ num }}</p>
+
+{% if grade == "A" %}
+    <p>우수 (A)</p>
+{% elif grade == "B" %}
+    <p>보통 (B)</p>
+{% else %}
+    <p>노력 필요 (C)</p>
+{% endif %}
+
+<h3>구구단</h3>
+<ul>
+    {% for n in numbers %}
+        <li>{{ n }} → {{ n*n }}</li>
+    {% endfor %}
+</ul>
+
+<a href="/">다시 입력</a>
+{% endblock %}
