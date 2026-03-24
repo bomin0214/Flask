@@ -22,7 +22,6 @@ def result():
     return render_template('result.html', grade=grade, numbers=numbers, num=num)
 
 @app.route('/hobby', methods=['GET'])
-
 def hobby():
     hobbies  = request.args.getlist('hobby')
     return render_template('hobby.html', hobbies=hobbies)
